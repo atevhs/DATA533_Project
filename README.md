@@ -34,7 +34,7 @@
     - Function2 - Selected window parameters
     - Function3 - level and block parameters
     
- - **Module2**-sudoku process
+ - **Module2**-Game_sudoku
 
 (User input settings and determining whether user input matches the rules)
 
@@ -44,14 +44,14 @@
     - Function4 - Determine if the game is successful
     
   - **Sub-package2**-sudoku_show
-  - **Module1**-paint class 
+  - **Module1**-paint 
  
 (Mainly brush functions to paint the interface of the window)
  
     - Function1 - The selected window
     - Function2 - The main window
 
-  - **Module2**-sudoku generate 
+  - **Module2**-generate 
 
 (Mainly generates random Sudoku puzzles that conform to the rules of the game, and guarantees unique solutions)
     
