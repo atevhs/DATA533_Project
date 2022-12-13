@@ -23,6 +23,7 @@ def parse_args2():
     selected_width: Width of the selected form
     selected_height: Height of the selected form
     """
+
     parser2.add_argument('--selected_width', default=260, type=int)
     parser2.add_argument('--selected_height', default=300, type=int)
 
@@ -37,7 +38,9 @@ def parse_args3():
     level: The difficulty level of game, default value is 0
     0 means simple; 1 means medium; 2 means hard
     """
+
     parser3.add_argument('--level', default=0, type=int)
+
     # Block
     """
     block_gap: Gap between two blocks
