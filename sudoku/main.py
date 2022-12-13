@@ -14,10 +14,10 @@ def main(args):
     selected_height = args.selected_height
     block_gap = args.block_gap
     block_size = args.block_size
-    #level = args.level
+    level = args.level
  
     game = Game_Sudoku(screen_width, screen_height, selected_width, selected_height,
-                       block_gap, block_size)
+                       block_gap, block_size, level)
     game.SelectedForm()
     # game.Form()
 
