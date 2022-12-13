@@ -1,5 +1,6 @@
 from Sudoku_Solve import configs
 from Sudoku_Solve.Game_Sudoku import Game_Sudoku
+import pygame
  
  
 def main(args):
@@ -13,10 +14,10 @@ def main(args):
     selected_height = args.selected_height
     block_gap = args.block_gap
     block_size = args.block_size
-    level = args.level
+    #level = args.level
  
     game = Game_Sudoku(screen_width, screen_height, selected_width, selected_height,
-                       block_gap, block_size, level)
+                       block_gap, block_size)
     game.SelectedForm()
     # game.Form()
 
