@@ -45,7 +45,7 @@ class Game_Sudoku(object):
         self.press_x, self.press_y = 0, 0  # mouse clicking position
  
         self.level = level  # the level of game
-        self.counts = [3, 40, 50]  # blank number
+        self.counts = [30, 40, 50]  # blank number
  
     # game initiate
     def init(self):
