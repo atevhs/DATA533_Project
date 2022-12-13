@@ -163,9 +163,9 @@ class Paint(object):
         success_font = pygame.font.SysFont("comicsansms", 30, True)
         #str_text = success_font.render('*********************', True, (178, 34, 34))
         Img = pygame.image.load('game-over.png')
-        form.blit(Img, (120,367))
+        form.blit(Img, (30,150))
         #form.blit(str_text, (115, 367))
-        pygame.display.update((3,100,255,360))
+        pygame.display.update((50,50,150,200))
 
 class Paintchild(Paint):
     def __init__(self,msg):
@@ -175,5 +175,5 @@ class Paintchild(Paint):
         Paint.Paint_success(self,form)
         success_font1 = pygame.font.SysFont("arial", 60, True)
         str_text1 = success_font1.render(msg, True, (0, 128, 0))
-        form.blit(str_text1, (115, 367))
+        form.blit(str_text1, (50, 367))
         pygame.display.update((5,140,555,560))
