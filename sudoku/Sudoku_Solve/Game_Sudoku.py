@@ -5,10 +5,10 @@ import pygame
 import numpy as np
  
 from Sudoku_Show.paint import Paint
+from Sudoku_Show.paint import Paintchild
 from Sudoku_Show.Generate import Generate
  
-# inherit from Paint class
-class Game_Sudoku(Paint):
+class Game_Sudoku(object):
     # initiate
     def __init__(self, screen_width, screen_height, selected_width, selected_height,
                  block_gap, block_size, level):
@@ -132,10 +132,12 @@ class Game_Sudoku(Paint):
             pygame.display.update()
         else:
             paint = Paint()
+            msg = "Successful!!"
+            paintchild = Paintchild(msg)
             paint.PaintForm(self.form, self.start_time, self.block_size, self.block_gap,
                                 self.move_x, self.move_y, self.press_x, self.press_y, self.martix,
                                 self.empty, self.is_same, self.issuccess, self.start,self.end)  # draw grid
-            paint.Paint_success(self.form)
+            paintchild.Paint_success(self.form,msg)
             #pygame.display.update()
 
     # user action(select window): keyboard/mouse input
