@@ -13,7 +13,7 @@ class Paint(object):
     def PaintSelected(self, selected_form, move_x, move_y):
         """ game background """
         # fill(color)
-        selected_form.fill((220, 220, 220))
+        selected_form.fill((193,205,193))
  
         """ font setting """
         # initiate font
@@ -22,17 +22,17 @@ class Paint(object):
         # part_1: easy
         # pygame.draw.rect(self.selected_form, (128, 128, 128), (0, 0, 260, 100))
         selected_font = pygame.font.SysFont('comicsansms', 30, True)
-        easy_text = selected_font.render('EASY', True, (0, 0, 0))
+        easy_text = selected_font.render('EASY', True, (0, 128, 128))
         selected_form.blit(easy_text, (90, 30))
  
         # part_2: medium
         # pygame.draw.rect(self.selected_form, (128, 128, 128), (0, 100, 260, 100))
-        medium_text = selected_font.render('MEDIUM', True, (0, 0, 0))
+        medium_text = selected_font.render('MEDIUM', True, (128, 0, 128))
         selected_form.blit(medium_text, (68, 130))
  
         # part_3: hard
         # pygame.draw.rect(self.selected_form, (128, 128, 128), (0, 200, 260, 100))
-        hard_text = selected_font.render('DIFFICULT', True, (0, 0, 0))
+        hard_text = selected_font.render('DIFFICULT', True, (0, 128, 0))
         selected_form.blit(hard_text, (55, 230))
  
         """ mouse moving """
@@ -62,13 +62,13 @@ class Paint(object):
         # add title
         # f = pygame.font.get_fonts() 
         # pygame.font.Font.render()
-        title_font = pygame.font.SysFont('comicsansms', 50, True)
-        title_text = title_font.render('Sudoku Game', True, (0, 0, 0))
+        title_font = pygame.font.SysFont('arial', 50, True)
+        title_text = title_font.render('Sudoku Game', True, (128, 0, 128))
         form.blit(title_text, (70, 3))
 
         pygame.draw.rect(form, (128, 128, 128), (410, 3, 130, 67))
-        time_font = pygame.font.SysFont('comicsansms', 28, True)
-        time_text = time_font.render('Time', True, (0, 0, 0))
+        time_font = pygame.font.SysFont('arial', 28, True)
+        time_text = time_font.render('Time', True, (0, 255, 255))
         form.blit(time_text, (440, 5))
 
         if issuccess==False:
@@ -156,11 +156,24 @@ class Paint(object):
         if not start:
             pygame.draw.rect(form, (192, 192, 192), (100, 250, 360, 300))
             font = pygame.font.SysFont("comicsansms", 30, True)
-            str_text = font.render('Press Blank To Start', True, (0, 0, 0))
+            str_text = font.render('Press Blank To Start', True, (128, 0, 128))
             form.blit(str_text, (130, 375))
 
     def Paint_success(self,form): 
-        success_font = pygame.font.SysFont("comicsansms", 60, True)
-        str_text = success_font.render('Successful!', True, (178, 34, 34))
-        form.blit(str_text, (115, 367))
+        success_font = pygame.font.SysFont("comicsansms", 30, True)
+        #str_text = success_font.render('*********************', True, (178, 34, 34))
+        Img = pygame.image.load('game-over.png')
+        form.blit(Img, (120,367))
+        #form.blit(str_text, (115, 367))
+        pygame.display.update((3,100,255,360))
+
+class Paintchild(Paint):
+    def __init__(self,msg):
+        super().__init__()
+        self.msg = msg
+    def Paint_success(self,form,msg):
+        Paint.Paint_success(self,form)
+        success_font1 = pygame.font.SysFont("arial", 60, True)
+        str_text1 = success_font1.render(msg, True, (0, 128, 0))
+        form.blit(str_text1, (115, 367))
         pygame.display.update((5,140,555,560))
