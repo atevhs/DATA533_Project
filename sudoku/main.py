@@ -2,6 +2,7 @@ from Sudoku_Solve import configs
 from Sudoku_Solve.Game_Sudoku import Game_Sudoku
  
  
+ 
 def main(args):
     """
     screen_width: Width of the form
