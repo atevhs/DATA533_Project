@@ -66,28 +66,28 @@ determine whether we have unique solution
 
 This is for parsing the arguments for configuration input from command-line.
 ###### Function : parsing arguments for main screen
-  - **screen_width**: Width of the form. argument from command-line = --screen_width and default value=560
- - **screen_height**: Height of the form.argument from command-line = --screen_height and default value=700
+  - **screen_width**: Width of the form. argument from command-line = --screen_width and default value=560 type=int
+ - **screen_height**: Height of the form.argument from command-line = --screen_height and default value=700 type=int
  
 ###### Function : parsing arguments for selected screen
- - **selected_width**: Width of the selected form.argument from command-line = --selected_width and default value=260
- - **selected_height**: Height of the selected form.argument from command-line = --selected_height and default value=300
+ - **selected_width**: Width of the selected form.argument from command-line = --selected_width and default value=260 type=int
+ - **selected_height**: Height of the selected form.argument from command-line = --selected_height and default value=300 type=int
 
 ###### Function : parsing arguments for block gap, bloack size and game level.
- - **level**: The difficulty level of game, default value is 0. argument from command-line = --level
+ - **level**: The difficulty level of game, default value is 0. argument from command-line = --level type=int
 (*0 :simple; 1 :medium; 2 :hard*)
- - **block_gap**: Gap between two blocks.argument from command-line =--block_gap and default=1
- - **block_size**: Size of a block.argument from command-line =--block_size and default=60
+ - **block_gap**: Gap between two blocks.argument from command-line =--block_gap and default=1 type=int
+ - **block_size**: Size of a block.argument from command-line =--block_size and default=60 type=int
 
-| Parameter | command-line argument | default value |
-|--|--|--|
-|screen_width|--screen_width|560|
-|screen_height|--screen_height|700|
-|selected_width|--selected_width|260|
-|selected_height|--selected_height|300|
-|level|--level|0|
-|block_gap|--block_gap|1|
-|block_size|--block_size|60|
+| Parameter | command-line argument | default value | type |
+|--|--|--|--|
+|screen_width|--screen_width|560|int|
+|screen_height|--screen_height|700|int|
+|selected_width|--selected_width|260|int|
+|selected_height|--selected_height|300|int|
+|level|--level|0|int|
+|block_gap|--block_gap|1|int|
+|block_size|--block_size|60|int|
 
 - ##### Module : Game_Sudoku.py : 
 It evaluates User input settings and determining whether user input matches the rules.
