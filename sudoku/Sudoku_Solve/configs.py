@@ -19,7 +19,13 @@ def parse_args():
     """
     parser.add_argument('--selected_width', default=260, type=int)
     parser.add_argument('--selected_height', default=300, type=int)
- 
+    # Difficulty level
+    """
+    level: The difficulty level of game, default value is 0
+    0 means simple; 1 means medium; 2 means hard
+    """
+    parser.add_argument('--level', default=0, type=int)
+    # Block
     """
     block_gap: Gap between two blocks
     block_size: Size of a block
