@@ -11,7 +11,7 @@ class TestAdd(unittest.TestCase):
         self.selected_form = pygame.display.set_mode([260, 300], 0, 0) 
         self.move_x = 0
         self.move_y = 0
-        self.form = pygame.display.set_mode([560, 700], 0, 0)
+        #self.form = pygame.display.set_mode([560, 700], 0, 0)
         
     def test_PaintSelected(self): # test routine
         self.assertEqual(pd.PaintSelected(self,self.selected_form, self.move_x, self.move_y), None)
@@ -20,7 +20,10 @@ class TestAdd(unittest.TestCase):
         self.assertEqual(pd.PaintSelected(self,self.selected_form, -23, -678), None)
         
     def test_Paint_success(self): # test routine
-        self.assertEqual(pd.Paint_success(self,self.form), True)
+        self.assertEqual(pd.Paint_success(self,pygame.display.set_mode([560, 700], 0, 0)), True)
+        self.assertEqual(pd.Paint_success(self,pygame.display.set_mode([0,0], 0, 0)), True)
+        self.assertEqual(pd.Paint_success(self,pygame.display.set_mode([100,20], 0, 0)), True)
+        self.assertEqual(pd.Paint_success(self,pygame.display.set_mode([56, 70], 0, 0)), True)
         #self.assertEqual(pd.Paint_success(self), None)
         
     @classmethod 
