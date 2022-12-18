@@ -1,6 +1,6 @@
-from Sudoku_Show_Test.test_Generate import TestAdd as tG
+from Sudoku_Show_Test.test_Generate import TestGenerate as tG
 from Sudoku_Solve_Test.test_configs import TestConfigs as tC
-from Sudoku_Show_Test.test_Paint import TestAdd as tP
+from Sudoku_Show_Test.test_Paint import TestPaint as tP
 from Sudoku_Solve_Test.test_Game_Sudoku import TestGame_Sudoku as tS
 import unittest
 
