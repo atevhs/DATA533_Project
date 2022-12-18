@@ -7,7 +7,7 @@ import numpy as np
 class TestGenerate(unittest.TestCase):
     @classmethod
     def setup_class(cls):
-        lh.info("starting class: {} execution".format(cls.__name__))
+        print("Testing Module Paint from Sudoku Show")
         
     def setUp(self):
         self.martix = np.zeros((9, 9), dtype='i1')
@@ -29,9 +29,13 @@ class TestGenerate(unittest.TestCase):
         self.assertIsNone(self.game.__init__(2))
         self.assertNotEqual(self.game.__init__(2),False)
         
+    def tearDown(self):
+        print("Execution ended for given Unit test")   
+         
     @classmethod 
     def teardown_class(cls):
-        lh.info("ending class: {} execution".format(cls.__name__))
+        print("Ending Testing for Module Paint from Sudoku Show")
+        #lh.info("ending class: {} execution".format(cls.__name__))
 
 if __name__ == "__main__":
     unittest.main()
