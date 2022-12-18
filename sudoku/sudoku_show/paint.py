@@ -166,6 +166,7 @@ class Paint(object):
         form.blit(Img, (30,150))
         #form.blit(str_text, (115, 367))
         pygame.display.update((50,50,150,200))
+        return True
 
 class Paintchild(Paint):
     def __init__(self,msg):
