@@ -7,7 +7,7 @@ import time
 import pygame
 import datetime
 
-class TestAdd(unittest.TestCase):
+class TestPaint(unittest.TestCase):
     @classmethod
     def setup_class(cls):
         print("Testing Module Paint from Sudoku Show")

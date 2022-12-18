@@ -4,7 +4,7 @@ from Sudoku_Solve.Game_Sudoku import Game_Sudoku
 import random
 import numpy as np
 
-class TestAdd(unittest.TestCase):
+class TestGenerate(unittest.TestCase):
     @classmethod
     def setup_class(cls):
         lh.info("starting class: {} execution".format(cls.__name__))
