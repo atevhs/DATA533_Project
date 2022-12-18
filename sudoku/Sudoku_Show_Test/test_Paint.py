@@ -10,9 +10,11 @@ import datetime
 class TestAdd(unittest.TestCase):
     @classmethod
     def setup_class(cls):
-        lh.info("starting class: {} execution".format(cls.__name__))
+        print("Testing Module Paint from Sudoku Show")
+        #lh.info("starting class: {} execution".format(cls.__name__))
         
     def setUp(self):
+        print("Setting up Unit Test")
         self.selected_form = pygame.display.set_mode([260, 300], 0, 0) 
         self.move_x = 0
         self.move_y = 0
@@ -30,6 +32,9 @@ class TestAdd(unittest.TestCase):
         self.level = configs.parse_args3().level
         self.game = Game_Sudoku(self.screen_width, self.screen_height, self.selected_width, self.selected_height,self.block_gap, self.block_size, self.level)
         
+    def tearDown(self):
+        print("Execution ended for given Unit test")
+    
     def test_PaintSelected(self): # test routine
         self.assertIsNone(pd.PaintSelected(self,self.selected_form, self.move_x, self.move_y))
         self.assertIsNone(pd.PaintSelected(self,self.selected_form, 100, 50))
@@ -50,7 +55,8 @@ class TestAdd(unittest.TestCase):
         
     @classmethod 
     def teardown_class(cls):
-        lh.info("ending class: {} execution".format(cls.__name__))
+        print("Ending Testing for Module Paint from Sudoku Show")
+        #lh.info("ending class: {} execution".format(cls.__name__))
         
 
 if __name__ == "__main__":
