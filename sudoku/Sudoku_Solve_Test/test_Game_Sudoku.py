@@ -38,6 +38,9 @@ class TestGame_Sudoku(unittest.TestCase):
         self.assertEqual(self.game.blank, [])
         self.assertEqual(self.game.end_time, '')
         self.assertEqual(self.game.is_conflict, [])
+     
+    def tearDown(self):
+        print("Execution ended for given Unit test") 
         
     @classmethod 
     def teardown_class(cls):
