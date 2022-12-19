@@ -28,6 +28,9 @@ class TestConfigs(unittest.TestCase):
         self.assertEqual(self.a3.block_gap, 1)
         self.assertEqual(self.a3.block_size, 60)
         self.assertNotEqual(self.a3.level, 1)
+     
+    def tearDown(self):
+        print("Execution ended for given Unit test") 
 
     def teardown_class(cls):
         lh.info("ending class: {} execution".format(cls.__name__))
